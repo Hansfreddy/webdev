@@ -1,0 +1,1 @@
+export CATALINA_OPTS="-agentlib:jdwp=transport=dt_socket,address=9000,server=y,suspend=y"
