@@ -66,7 +66,8 @@ Vagrant.configure("2") do |config|
     
     debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
     debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
-    apt-get install -y mysql-server mysql-client mysql-workbench        
+    apt-get install -y mysql-server mysql-client mysql-workbench
+    sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/mysql.conf.d/mysqld.cnf
     
     cd /opt/tomcat
     chgrp -R tomcat /opt/tomcat
