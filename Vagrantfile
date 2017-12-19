@@ -58,7 +58,7 @@ Vagrant.configure("2") do |config|
     cd /tmp
     wget http://mirror.switch.ch/mirror/apache/dist/tomcat/tomcat-9/v9.0.2/bin/apache-tomcat-9.0.2.tar.gz
     mkdir /opt/tomcat
-    tar xvzf apache-tomcat-9.0.1.tar.gz -C /opt/tomcat --strip-components=1
+    tar xvzf apache-tomcat-9.0.2.tar.gz -C /opt/tomcat --strip-components=1
     chown -R tomcat:tomcat /opt/tomcat
     
     echo "setxkbmap ch" >> /home/ubuntu/.bashrc    
