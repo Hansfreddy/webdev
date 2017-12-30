@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "file", source: "vmfiles/MySQL workbench.desktop", destination: "/tmp/MySQL workbench.desktop"
   config.vm.provision "file", source: "vmfiles/Terminal.desktop", destination: "/tmp/Terminal.desktop"
   config.vm.provision "file", source: "vmfiles/tomcat.service", destination: "/tmp/tomcat.service"
-  config.vm.provision "file", source: "vmfiles/catalina.opts", destination: "/tmp/catalina.opts"
+  config.vm.provision "file", source: "vmfiles/setenv.sh", destination: "/tmp/setenv.sh"
   
   config.vm.provider "virtualbox" do |v|
     v.gui = true
@@ -24,7 +24,7 @@ Vagrant.configure("2") do |config|
     cp "/tmp/MySQL workbench.desktop" "/home/ubuntu/Desktop/MySQL workbench.desktop"
     cp "/tmp/Terminal.desktop" "/home/ubuntu/Desktop/Terminal.desktop"
     cp /tmp/tomcat.service /etc/systemd/system/tomcat.service
-    cp /tmp/catalina.opts /opt/tomcat/bin/setenv.sh
+    cp /tmp/setenv.sh /opt/tomcat/bin/setenv.sh
     
     chmod +x "/home/ubuntu/Desktop/MySQL workbench.desktop"
     chmod +x /home/ubuntu/Desktop/Terminal.desktop

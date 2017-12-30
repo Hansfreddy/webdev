@@ -1,1 +1,1 @@
-export CATALINA_OPTS="-agentlib:jdwp=transport=dt_socket,address=9000,server=y,suspend=y"
+CATALINA_OPTS="-Dcom.sun.management.jmxremote.port=9000 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=webdev"
